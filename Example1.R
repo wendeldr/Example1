@@ -15,7 +15,8 @@ LumA_groups <- split(colnames(LumA), sample(1:nfold, ncol(LumA), replace=T))
 Basal_groups <- split(colnames(Basal), sample(1:nfold, ncol(Basal), replace=T))
   
 result <- array()
-  
+
+
 for (test_group in 1:nfold) {
     
     testA <- LumA[,colnames(LumA) %in% unlist(LumA_groups[test_group])]
